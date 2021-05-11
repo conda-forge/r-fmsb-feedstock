@@ -1,4 +1,4 @@
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/fmsb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fmsb/fmsb_{{ version }}.tar.gz
-  sha256: 8570cab95e4bc85f0713b27aced40b872945bee40c72906b2f9aecdddc9f3c74
+  sha256: 226e290afac6c31302533739936c3f10eb445984a91f7ab64a786e13cf3df826
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -23,6 +23,7 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
   run:
@@ -35,12 +36,11 @@ test:
 
 about:
   home: http://minato.sip21c.org/msb/
-  license: GPL (>= 2)
-  summary: Several utility functions for the book entitled  "Practices of Medical and Health
-    Data Analysis using R" (Pearson Education Japan, 2007) with Japanese demographic
-    data and some demographic analysis related functions.
+  license: GPL-2.0-or-later
+  summary: Several utility functions for the book entitled  "Practices of Medical and Health Data Analysis using R" (Pearson Education Japan, 2007) with Japanese demographic data and some demographic analysis related functions.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
