@@ -1,4 +1,4 @@
-{% set version = "0.7.1" %}
+{% set version = "0.7.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/fmsb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fmsb/fmsb_{{ version }}.tar.gz
-  sha256: 226e290afac6c31302533739936c3f10eb445984a91f7ab64a786e13cf3df826
+  sha256: 0bfe99a7c01dc4ed006df09ed5794234aebcbd577354d0abcfe7f18206919cfa
 
 build:
   merge_build_host: true  # [win]
