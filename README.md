@@ -1,11 +1,11 @@
-About r-fmsb
-============
+About r-fmsb-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-fmsb-feedstock/blob/main/LICENSE.txt)
 
 Home: http://minato.sip21c.org/msb/
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-fmsb-feedstock/blob/main/LICENSE.txt)
 
 Summary: Several utility functions for the book entitled  "Practices of Medical and Health Data Analysis using R" (Pearson Education Japan, 2007) with Japanese demographic data and some demographic analysis related functions.
 
