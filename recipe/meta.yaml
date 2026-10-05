@@ -1,4 +1,4 @@
-{% set version = "0.7.6" %}
+{% set version = "0.7.8" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/fmsb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fmsb/fmsb_{{ version }}.tar.gz
-  sha256: e57df29d44d988ec977b3d7a6250e5d647ae8572bc41240bb86290252d79d3b2
+  sha256: 4c9adab80a36d41887343cdeacf3965967bd4beee6d26afdc476f1647bd3b0a8
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
